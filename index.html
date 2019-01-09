@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>このサンプルはPC(大きめのディスプレイ)で見てください</h1>
+  <header class="header">
+    <div class="logo">
+      ロゴ
+    </div>
+    <div class="menu-box">
+      <ul class="menu">
+        <li>メニュー1</li>
+        <li>メニュー2</li>
+        <li>メニュー3</li>
+        <li>メニュー4</li>
+      </ul>
+    </div>
+  </header>
+  <p>↑ margin-left: auto; とすると右寄せになるのがポイント（メニュー1,メニュー2...の部分）</p>
+  
+  <main>
+    <!-- display: flex未指定 -->
+    <h2>display: flex未指定</h2>
+    <p>ブロックレベル要素は普通は縦に並ぶ</p>
+    <div class="">
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+    </div>
+
+    <!-- 親要素にdisplay: flexを指定 -->
+    <h2>親要素にdisplay: flexを指定</h2>
+    <p>親要素にdisplay: flexを指定するだけで横並びになる</p>
+    <div class="display-flex">
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+    </div>
+    
+    <!-- 中央配置したい場合 -->
+    <!-- justify-content: center -->
+    <h2>justify-content: center</h2>
+    <p>横並びにしたものを中央配置したい場合はjustify-content: center;</p>
+    <div class="display-flex justify-center">
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+    </div>
+
+    <!-- 横方向において均等に配置したい場合(左右のスペースあり) -->
+    <!-- justify-content: space-around -->
+    <h2>justify-content: space-around</h2>
+    <p>横方向において均等に配置したい場合(左右のスペースあり)はjustify-content: space-around;</p>
+    <div class="display-flex justify-space-around">
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+    </div>
+
+    <!-- 横方向において均等に配置したい場合(左右のスペースなし) -->
+    <!-- justify-content: space-between -->
+    <h2>justify-content: space-between</h2>
+    <p>横方向において均等に配置したい場合(左右のスペースなし)はjustify-content: space-between;</p>
+    <div class="display-flex justify-space-between">
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+    </div>
+
+
+    <!-- flex-wrap 未指定 -->
+    <h2>flex-wrap 未指定</h2>
+    <p>要素が多い場合特に何も指定しないと要素が縮小されて1行に配置される</p>
+    <div class="display-flex">
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+    </div>
+
+    <!-- flex-wrap 指定 -->
+    <h2>flex-wrap 指定</h2>
+    <p>一方、flex-wrap: wrap;を指定するとよしなに改行してくれる</p>
+    <div class="display-flex flex-wrap">
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy2.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+
+      <div class="item">
+        <div class="item-img"><img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg" alt=""></div>
+        <div class="item-body">
+          <div class="item-title">見出し見出し見出し見出し</div>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div><!-- /.item -->
+    </div>
+
+    <!-- align-items 未指定 -->
+    <h2>align-items 未指定</h2>
+    <p>横に並べたとき基本は上寄せ</p>
+    <div class="display-flex">
+      <div>
+        <img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg">
+      </div>
+
+      <div>
+        <p>
+          基本上寄せ基本上寄せ基本上寄せ基本上寄せ<br>
+          基本上寄せ基本上寄せ基本上寄せ基本上寄せ<br>
+          基本上寄せ基本上寄せ基本上寄せ基本上寄せ<br>
+          基本上寄せ基本上寄せ基本上寄せ基本上寄せ<br>
+          基本上寄せ基本上寄せ基本上寄せ基本上寄せ
+        </p>
+      </div>
+    </div>
+
+    <!-- align-items center -->
+    <h2>align-items center</h2>
+    <p>align-items: center; を指定すると中央寄せになる</p>
+    <div class="display-flex align-items-center">
+      <div>
+        <img src="https://haniwaman.com/wp-content/uploads/2018/10/dummy3.jpg">
+      </div>
+
+      <div>
+        <p>
+          中央寄せ中央寄せ中央寄せ中央寄せ中央寄せ<br>
+          中央寄せ中央寄せ中央寄せ中央寄せ中央寄せ<br>
+          中央寄せ中央寄せ中央寄せ中央寄せ中央寄せ<br>
+          中央寄せ中央寄せ中央寄せ中央寄せ中央寄せ<br>
+          中央寄せ中央寄せ中央寄せ中央寄せ中央寄せ
+        </p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

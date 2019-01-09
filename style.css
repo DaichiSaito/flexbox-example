@@ -1,0 +1,76 @@
+/* ヘッダー部分 */
+.header {
+  background: lime;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.menu-box {
+  margin-left: auto;
+}
+.menu {
+  display: flex;
+}
+
+/* コンテンツ部分 */
+.display-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+
+
+
+
+
+
+/* 以下は今回の勉強会とは関係ないので流してOK */
+
+img {
+  max-width: 100%;
+}
+
+.item {
+  width: 20%;
+}
+
+.item-img {
+  padding: 0;
+}
+.item-body {
+  padding: 0;
+}
+.item-title {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ef5350;
+}
+.item-body p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
